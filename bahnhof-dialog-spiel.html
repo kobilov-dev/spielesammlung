@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bahnhof Dialog Übung</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Unser Dialog Test</h1>
+      <button onclick="öffnen()">Dialog öffnen</button>
+
+      <dialog id="mytestDialog">
+        <header>
+          <h2>Bahnhof Übung</h2>
+          <p>Ziehen Sie die Sätze in die richtige Spalte.</p>
+        </header>
+
+        <section>
+          <!-- ZIEL-TABELLE -->
+          <table class="ziel-tabelle">
+            <tr>
+              <th>Automat</th>
+              <th>Reisende</th>
+            </tr>
+            <tr>
+              <td
+                id="zone-automat"
+                ondragover="allowDrop(event)"
+                ondrop="drop(event)"
+              ></td>
+              <td
+                id="zone-reisende"
+                ondragover="allowDrop(event)"
+                ondrop="drop(event)"
+              ></td>
+            </tr>
+          </table>
+
+          <!-- QUELL-TABELLE (Sätze) -->
+          <table class="quell-tabelle">
+            <tr>
+              <td id="satz-r3" draggable="true" ondragstart="drag(event)">
+                Wann komme ich dann in München an?
+              </td>
+            </tr>
+            <tr>
+              <td id="satz-a2" draggable="true" ondragstart="drag(event)">
+                Da gibt es einen ICE. Er fährt um 13:15 Uhr ab.
+              </td>
+            </tr>
+            <tr>
+              <td id="satz-r2" draggable="true" ondragstart="drag(event)">
+                Am Freitag, kurz nach 13 Uhr.
+              </td>
+            </tr>
+            <tr>
+              <td id="satz-r4" draggable="true" ondragstart="drag(event)">
+                Okay, am Abend. Das passt gut.
+              </td>
+            </tr>
+            <tr>
+              <td id="satz-r5" draggable="true" ondragstart="drag(event)">
+                Ja, bitte, hin und zurück. Ich möchte am Montag zurückfahren.
+              </td>
+            </tr>
+            <tr>
+              <td id="satz-a3" draggable="true" ondragstart="drag(event)">
+                Ankunft um 18:45 Uhr.
+              </td>
+            </tr>
+            <tr>
+              <td id="satz-r1" draggable="true" ondragstart="drag(event)">
+                Guten Tag, ich möchte eine Fahrkarte nach München.
+              </td>
+            </tr>
+             <tr>
+              <td id="satz-a4" draggable="true" ondragstart="drag(event)">
+                Möchten Sie auch eine Rückfahrkarte.
+              </td>
+            </tr>
+            <tr>
+              <td id="satz-a1" draggable="true" ondragstart="drag(event)">
+                Gerne, wann wollen Sie fahren?
+              </td>
+            </tr>
+            <tr>
+              <td id="satz-a5" draggable="true" ondragstart="drag(event)">
+                Hier ist Ihre Fahrkarte, bitte.
+              </td>
+            </tr>
+            <tr>
+              <td id="satz-r6" draggable="true" ondragstart="drag(event)">
+                Vielen Dank!
+              </td>
+            </tr>
+          </table>
+        </section>
+
+        <footer>
+          <button onclick="schließen()">Dialog schließen</button>
+        </footer>
+      </dialog>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

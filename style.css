@@ -1,0 +1,52 @@
+#mytestDialog {
+    width: 80%;
+    max-width: 1280px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.section_bh{
+    width: 350px;
+    height: 350px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Die Landezonen */
+#zone-automat, #zone-reisende {
+    min-height: 150px;
+    background-color: #fafafa;
+    vertical-align: top;
+    width: 50%;
+}
+
+/* Die ziehbaren Sätze */
+[draggable="true"] {
+    cursor: grab;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    margin-bottom: 5px;
+    display: block; /* Damit sie sich wie Karten verhalten */
+    padding: 8px;
+    border-radius: 4px;
+}
+
+[draggable="true"]:active {
+    cursor: grabbing;
+    opacity: 0.5;
+}
