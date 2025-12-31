@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="index.html"></a>
+    <button onclick="showWitz(0)">witz 1</button>
+    <button onclick="showWitz(1)">witz 2</button>
+    <button onclick="showWitz(2)">witz 3</button>
+    <button onclick="showWitz(3)">witz 4</button>
+    <div id="joke"></div>
+    
+
+    <script>
+      let witz0 =
+        "Wie viele Windows-Anwender braucht man um eine Glühbirne zu wechseln? 100! Einer wechselte die Birne, 99 klicken die Fehlermeldungen weg.";
+
+        let witz1 = "Linux wird nie das meistinstallierte Betriebssystem sein, wenn man bedenkt, wie oft man Windows neu installieren muss!";
+        let witze = [witz0, witz1];
+      function showWitz(nummer) {
+        let witz = document.getElementById("joke");
+        witz.innerText = witze[nummer];
+      }
+    </script>
+  </body>
+</html>
