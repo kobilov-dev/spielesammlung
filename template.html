@@ -13,17 +13,46 @@
     <button onclick="showWitz(2)">witz 3</button>
     <button onclick="showWitz(3)">witz 4</button>
     <div id="joke"></div>
-    
+
+    <div id="food">
+      <button onclick="addFruit('Apfel')">Apfel</button>
+      <button onclick="addFruit('Banane')">Banane</button>
+      <button onclick="addFruit('Clementine')">Clementine</button>
+    </div>
+    <div id="ausgabe"></div>
+    <div id="delete">
+      <button onclick="deletFruits()">Alles löschen</button>
+    </div>
 
     <script>
       let witz0 =
         "Wie viele Windows-Anwender braucht man um eine Glühbirne zu wechseln? 100! Einer wechselte die Birne, 99 klicken die Fehlermeldungen weg.";
 
-        let witz1 = "Linux wird nie das meistinstallierte Betriebssystem sein, wenn man bedenkt, wie oft man Windows neu installieren muss!";
-        let witze = [witz0, witz1];
+      let witz1 =
+        "Linux wird nie das meistinstallierte Betriebssystem sein, wenn man bedenkt, wie oft man Windows neu installieren muss!";
+      let witze = [witz0, witz1];
       function showWitz(nummer) {
         let witz = document.getElementById("joke");
         witz.innerText = witze[nummer];
+      }
+      let container = document.getElementById("food");
+      let drachenBtn = document.createElement("button");
+      drachenBtn.textContent = "Drachenfrucht";
+      container.appendChild(drachenBtn);
+
+      let anzeige = document.getElementById("ausgabe");
+
+      drachenBtn.onclick = function(){
+        addFruit('Drachenfrucht')
+      }
+     
+
+      function addFruit(name){
+        anzeige.innerHTML += "<b>" + name + "</b>";
+      }
+
+      function deletFruits() {
+        anzeige.innerHTML = "";
       }
     </script>
   </body>
