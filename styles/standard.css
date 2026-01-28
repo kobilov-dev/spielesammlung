@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+  height: 120px;
+  background-color: #f0f0f0; /* Farbe der Linie */
+  border: none;
+  margin: 0;
+  width: 100%;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); /* Schattierung nach unten */
+}
+
+.input-notes{
+    width: 150px;
+    height: 20px;
+}
+
+.note-container {
+    display: grid;
+    /* auto-fill erlaubt beliebig viele Reihen, die so hoch sind wie ihr Inhalt */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: start; /* Verhindert, dass alle Boxen in einer Reihe gleich lang gestreckt werden */
+}
+
+.note-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+    /* Dynamisches Wachstum: */
+    min-height: 150px; /* Mindestgröße, wenn leer */
+    height: auto;      /* Wächst automatisch mit dem Inhalt */
+    overflow: hidden;  /* Verhindert, dass Text hässlich übersteht */
+}
+
+/* Damit die Textarea innerhalb der Box auch mitwächst: */
+textarea {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    border: none;
+    resize: none; /* Verhindert manuelles Ziehen, da es automatisch wachsen soll */
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.h3{
+    font-family: sans-serif;
+    color: #333;
+
+}
+

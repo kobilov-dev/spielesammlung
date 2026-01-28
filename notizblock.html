@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notizblock</title>
+    <link rel="stylesheet" href="./styles/standard.css" />
+  </head>
+  <body onload="renderNotes()">
+    <header class="header">
+      <h1>Notizblock</h1>
+    </header>
+
+    <main>
+      <div class="note-container" id="container">
+        <div class="note-box write">
+          <h3>Schreiben & speichern</h3>
+          <input id="note_title" type="text">
+          <input id="note_text" type="text">
+          <button onclick="addNotes()">Notiz speichern</button>
+        </div>
+
+        <div class="note-box archive">
+          <h3>Archivierte Notizen</h3>
+          <p style="color: #888">Hier liegen deine Notizen</p>
+          <div id="note-list"></div>
+        </div>
+
+
+        <div class="note-box trash">
+          <h3>Papierkorb</h3>
+          <p style="color: #888">Zuletzt gelöscht...</p>
+          <div id="trash_content"></div>
+        </div>
+
+        <div class="note-box favorite">
+          <h3>Wichtige Favoriten</h3>
+          <p>Deine wichtigsten Notizen immer oben fixiert</p>
+          <div id="favorite_notes"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./scripts/notes.js"></script>
+  </body>
+</html>
